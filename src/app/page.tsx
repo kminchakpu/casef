@@ -1,16 +1,17 @@
+import Hero from "@/components/Hero/Hero";
+import AboutSection from "@/components/Home/AboutSection";
+import Features from "@/components/Home/Features";
+import ImpactStats from "@/components/Home/ImpactStats";
 
-import styles from "./page.module.css";
+
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <h1 className={styles.title}>Welcome to CASEF</h1>
-        <p className={styles.description}>
-          Empowering Communities, Transforming Lives
-        </p>
-        
-      </main>
-    </div>
+    <>
+      <Hero />
+      <AboutSection />
+      <Features />
+      <ImpactStats />
+    </>
   );
 }

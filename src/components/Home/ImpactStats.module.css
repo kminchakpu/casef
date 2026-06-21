@@ -1,0 +1,137 @@
+.statsSection {
+  width: 100%;
+  background-color: #f7f7f7; 
+  padding: 7rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--navbar-font);
+}
+
+/* Fallback/Placeholder structure for the dotted world map pattern if needed */
+.backgroundImageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.08;
+  background-image: radial-gradient(#ffffff 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Top Header Group styles */
+.headerBlock {
+  text-align: center;
+  max-width: 720px;
+  margin-bottom: 5rem;
+}
+
+.badge {
+  color: #a83535;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 1.25rem;
+  font-family: var(--heading-font);
+}
+
+.heading {
+  color: var(--brand-color); 
+  font-size: clamp(2rem, 4vw, 2.85rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 1.5rem 0;
+  letter-spacing: -0.01em;
+  font-family: var(--heading-font);
+}
+
+.subheading {
+  color: var(--brand-color);
+  font-size: clamp(1rem, 1.8vw, 1.15rem);
+  font-family: var(--text-font);
+  line-height: 1.6;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Horizontal Metrics Layout Row */
+.statsGrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.statCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.statValue {
+  color: var(--brand-color);
+  font-size: clamp(3.5rem, 6vw, 5.5rem); 
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+  font-family: var(--heading-font);
+}
+
+.statLabel {
+  color: var(--brand-color);
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Responsive Adaptive Viewport Adjustments */
+@media (max-width: 992px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3.5rem 2rem;
+  }
+  
+  .headerBlock {
+    margin-bottom: 4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .statsSection {
+    padding: 5rem 1rem;
+  }
+
+  .headerBlock {
+    margin-bottom: 3rem;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  
+  .statValue {
+    margin-bottom: 0.5rem;
+  }
+}

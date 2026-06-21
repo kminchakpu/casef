@@ -183,17 +183,6 @@
   pointer-events: none;
 }
 
-.rightBlur {
-  position: absolute;
-  top: -2rem;
-  right: -3rem;
-  width: 10rem;
-  height: 10rem;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
-  border-radius: 50%;
-  pointer-events: none;
-}
-
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .topSection {

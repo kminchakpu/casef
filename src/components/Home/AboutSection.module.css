@@ -1,0 +1,165 @@
+.aboutSection {
+  width: 100%;
+  background-color: #f7f7f7; 
+  padding: 6rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+/* Image Column Framing Rules */
+.imageColumn {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.imageFrame {
+  border: 8px solid #4a4a4a; 
+  padding: 0;
+  width: 100%;
+  max-width: 520px;
+  display: flex;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.12 / 1; /* Retains the exact balanced square-horizontal photo ratio */
+}
+
+.featuredImage {
+  object-fit: cover;
+}
+
+/* Content Text Architecture Column Rules */
+.contentColumn {
+  flex: 1.1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.taglineRow {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-bottom: 0.75rem;
+}
+
+.slashDecoration {
+  color: #b81d24; /* Crimson accent tone */
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+.tagline {
+  color: #242424;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  font-family: var(--heading-font);
+}
+
+.title {
+  color: #141b1e;
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin: 0 0 1.5rem 0;
+  letter-spacing: -0.01em;
+  font-family: var(--heading-font);
+}
+
+.leadText {
+  color: #4a4a4a;
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 0 0 1.5rem 0;
+  font-family: var(--navbar-font);
+}
+
+.bodyTextContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.bodyText {
+  color: #7a7a7a;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+  font-weight: 400;
+  font-family: var(--navbar-font);
+}
+
+/* Specialized Crimson Context Button Action Element */
+.moreButton {
+  background-color: #b81d24; /* Striking solid crimson block backdrop */
+  color: var(--text-main);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 1rem 2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.moreButton:hover {
+  background-color: #96151b;
+}
+
+.moreButton:active {
+  transform: scale(0.98);
+}
+
+.buttonArrow {
+  transition: transform 0.2s ease;
+}
+
+.moreButton:hover .buttonArrow {
+  transform: translateX(3px);
+}
+
+/* Tablet and Smartphone Layout Resizing Rules */
+@media (max-width: 992px) {
+  .container {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .contentColumn {
+    width: 100%;
+  }
+
+  .imageFrame {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutSection {
+    padding: 4rem 1rem;
+  }
+  
+  .title {
+    font-size: 1.75rem;
+  }
+}
