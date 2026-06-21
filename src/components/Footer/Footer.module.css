@@ -1,0 +1,213 @@
+.footer {
+  width: 100%;
+  background-color: var(--navbar-background);
+  border-top: 1px solid var(--border-color);
+  position: relative;
+  overflow: hidden;
+  font-family: var(--navbar-font);
+  padding-top: 5rem;
+  padding-bottom: 2.5rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 10;
+}
+
+.topSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 4rem;
+  padding-bottom: 4rem;
+}
+
+/* Brand Section Styling */
+.brandColumn {
+  flex: 1;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.logoIcon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.logoText {
+  color: var(--text-main);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  font-family: var(--heading-font);
+}
+
+.brandDescription {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.socialRow {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.socialIcon {
+  color: var(--text-muted);
+  transition: color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.socialIcon:hover {
+  color: var(--text-main);
+}
+
+/* Nav Link Columns Area */
+.linksGrid {
+  flex: 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.linksColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.columnTitle {
+  color: var(--text-main);
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0;
+  font-family: var(--heading-font);
+}
+
+.columnList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footerLink {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 400;
+  transition: color 0.2s ease;
+}
+
+.footerLink:hover {
+  color: var(--text-main);
+}
+
+/* Bottom Bar / Copyright Styling */
+.bottomSection {
+  border-top: 1px solid var(--border-color);
+  padding-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.copyright {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin: 0;
+  text-align: center;
+}
+
+.attributionLink {
+  color: var(--text-main);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.attributionLink:hover {
+  text-decoration: underline;
+}
+
+/* Back To Top Action Button styling */
+.scrollTopButton {
+  position: absolute;
+  right: 0;
+  bottom: -0.5rem;
+  background-color: #4a6cf7; /* High-contrast blue matching the arrow base */
+  color: var(--text-main);
+  border: none;
+  border-radius: var(--radius-md);
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.scrollTopButton:hover {
+  background-color: var(--brand-hover);
+  transform: translateY(-2px);
+}
+
+/* Ambient Graphic Mockups matching background shapes */
+.leftDecoration {
+  position: absolute;
+  bottom: 10%;
+  left: -2rem;
+  width: 6rem;
+  height: 6rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transform: rotate(35deg);
+  pointer-events: none;
+}
+
+.rightBlur {
+  position: absolute;
+  top: -2rem;
+  right: -3rem;
+  width: 10rem;
+  height: 10rem;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .topSection {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .linksGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .scrollTopButton {
+    position: static;
+    margin-top: 1.5rem;
+  }
+  .bottomSection {
+    flex-direction: column;
+  }
+}
