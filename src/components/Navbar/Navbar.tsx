@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './Navbar.module.css';
@@ -55,6 +55,12 @@ const navigationMenu: NavItem[] = [
 ];
 
 export default function Navbar(): React.JSX.Element {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <header className={styles.header}>
       <div className={styles.container}>
@@ -72,13 +78,13 @@ export default function Navbar(): React.JSX.Element {
         </Link>
 
         {/* Dynamic Navigation Menu */}
-        <nav className={styles.nav}>
+        <nav className={`${styles.nav} ${isOpen ? styles.navActive : ''}`}>
           <ul className={styles.navList}>
             {navigationMenu.map((item: NavItem) => {
               // Special Render case for the standalone Donate Button
               if (item.isButton) {
                 return (
-                  <li key={item.label} className={styles.navItem}>
+                  <li key={item.label} className={styles.navItem} onClick={() => setIsOpen(false)}>
                     <Link href={item.href} className={styles.donateBtn}>
                       {item.label}
                     </Link>
@@ -112,7 +118,7 @@ export default function Navbar(): React.JSX.Element {
                   {item.dropdownItems && (
                     <ul className={styles.dropdownMenu}>
                       {item.dropdownItems.map((subItem: DropdownItem) => (
-                        <li key={subItem.label}>
+                        <li key={subItem.label} onClick={() => setIsOpen(false)}>
                           <Link href={subItem.href} className={styles.dropdownLink}>
                             {subItem.label}
                           </Link>
@@ -126,8 +132,9 @@ export default function Navbar(): React.JSX.Element {
           </ul>
         </nav>
 
-        {/* Theme Action Toggler */}
+        {/* Action Elements Container */}
         <div className={styles.actions}>
+          {/* Theme Action Toggler */}
           <button
             className={styles.themeToggle}
             aria-label="Toggle theme"
@@ -146,6 +153,18 @@ export default function Navbar(): React.JSX.Element {
               <circle cx="12" cy="12" r="5" />
               <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
             </svg>
+          </button>
+
+          {/* Hamburger Menu Toggle Button */}
+          <button 
+            className={`${styles.hamburger} ${isOpen ? styles.hamburgerActive : ''}`} 
+            onClick={toggleMenu}
+            aria-label="Toggle navigation menu"
+            type="button"
+          >
+            <span className={styles.bar}></span>
+            <span className={styles.bar}></span>
+            <span className={styles.bar}></span>
           </button>
         </div>
       </div>
