@@ -1,0 +1,64 @@
+.banner {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(15, 23, 42, 0.65);
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.content h1 {
+  margin: 0;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  font-family: var(--heading-font);
+}
+
+.content p {
+  margin: 0;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  color: #d1d5db;
+}
+
+@media (max-width: 768px) {
+  .banner {
+    height: 320px;
+  }
+
+  .content h1 {
+    font-size: 2.5rem;
+  }
+
+  .content p {
+    font-size: 0.8rem;
+  }
+}
