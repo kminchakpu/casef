@@ -51,8 +51,8 @@ export default function AboutUsMain(): React.JSX.Element {
         <div className={styles.imageSide}>
           <div className={styles.imageWrapper}>
             <Image
-              src="/farmer2.png"
-              alt="A farmer showing Cucumber"
+              src="/mechanic.png"
+              alt="A mechanic holding tyre"
               fill
               sizes="(max-width: 992px) 100vw, 50vw"
               priority

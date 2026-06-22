@@ -120,7 +120,7 @@
   height: 100%;
 }
 
-.athleteImage {
+.farmerImage {
   object-fit: contain;
   object-position: bottom right;
 }
@@ -128,7 +128,6 @@
 /* Responsive Adaptive Layout Rules */
 @media (max-width: 992px) {
   .aboutSection {
-    /* Fallback to standard vertical split overlay background on smaller frames */
     background: #fbfbfb;
     padding: 5rem 1.5rem 0 1.5rem;
   }
@@ -154,7 +153,7 @@
     width: calc(100% + 3rem);
   }
   
-  .athleteImage {
+  .farmerImage {
     object-position: bottom center;
     padding: 0 1rem;
   }
