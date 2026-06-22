@@ -41,7 +41,7 @@ export default function AboutSection(): React.JSX.Element {
 
           <div className={styles.bodyTextContainer}>
             <p className={styles.bodyText}>
-              Nigeria continues to face significant socio-economic challenges, including unemployment, poverty, and limited access to skills development opportunities. These challenges disproportionately affect vulnerable populations, particularly youths and women.
+              Africa continues to face significant socio-economic challenges, including unemployment, poverty, and limited access to skills development opportunities. These challenges disproportionately affect vulnerable populations, particularly youths and women.
             </p>
             <p className={styles.bodyText}>
               CASEF was established to address these challenges through practical skills acquisition, entrepreneurship development, vocational education, and empowerment initiatives that promote self-reliance and economic resilience.

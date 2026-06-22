@@ -23,7 +23,7 @@ export default function ImpactStats(): React.JSX.Element {
         {/* Header Block Section */}
         <div className={styles.headerBlock}>
           <span className={styles.badge}>Our Impact in Numbers</span>
-          <h2 className={styles.heading}>Creating Lasting Change Across Communities</h2>
+          <h2 className={styles.heading}>Creating Lasting Change Across Communities in Africa</h2>
           <p className={styles.subheading}>
             Through entrepreneurship, skills development, and community empowerment, CASEF continues to create opportunities and improve livelihoods for individuals and communities.
           </p>
