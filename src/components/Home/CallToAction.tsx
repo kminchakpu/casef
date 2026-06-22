@@ -11,23 +11,23 @@ interface CallToActionProps {
 }
 
 export default function CallToAction({
-  tagline = "/ CTA /",
-  heading = "Support Us On Game Day",
-  description = "Purchase tickets to our next game and experience the exhilarating atmosphere at the stadium!",
-  buttonText = "Get Tickets",
-  buttonHref = "/tickets"
+  tagline = "/ Get Involved /",
+  heading = "Support Us In Impacting Lives",
+  description = "Your contribution to CASEF helps fuel sustainable programs, empower local communities, and create lasting real-world impact—donate today to be part of the change!",
+  buttonText = "Donate Now",
+  buttonHref = "/donate"
 }: CallToActionProps) {
   return (
     <section className={styles.container}>
       {/* Visual / Image Side */}
       <div className={styles.imageWrapper}>
         <Image
-          src="/images/player.png" 
-          alt="Soccer player action shot"
+          src="/farmer.png" 
+          alt="Farmer carrying Basket"
           width={600}
-          height={500}
+          height={800}
           priority
-          className={styles.playerImage}
+          className={styles.farmerImage}
         />
       </div>
 
