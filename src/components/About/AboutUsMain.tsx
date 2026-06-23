@@ -28,25 +28,8 @@ export default function AboutUsMain(): React.JSX.Element {
               At CASEF, we believe that lasting social and economic transformation begins when people are equipped with the knowledge, skills, and opportunities needed to improve their lives. Through entrepreneurship development, vocational and technical skills training, digital literacy programs, and community empowerment initiatives, we help individuals unlock their potential and become active contributors to their communities.
             </p>
           </div>
-
-          <Link href="/team" className={styles.teamButton}>
-            <span>Our Team</span>
-            <svg 
-              className={styles.arrowIcon}
-              width="14" 
-              height="14" 
-              viewBox="0 0 24 24" 
-              fill="none" 
-              stroke="currentColor" 
-              strokeWidth="2.5"
-              strokeLinecap="round" 
-              strokeLinejoin="round"
-            >
-              <polyline points="9 18 15 12 9 6" />
-            </svg>
-          </Link>
         </div>
-
+          
         {/* Right Athlete Image Side */}
         <div className={styles.imageSide}>
           <div className={styles.imageWrapper}>
