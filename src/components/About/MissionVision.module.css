@@ -42,8 +42,8 @@
 
 /* Premium Gold/Yellow Subtitle Tag */
 .badge {
-  color: #cca43b; /* Vibrant amber-gold typography accent */
-  font-size: 0.85rem;
+  color: #cca43b; 
+  font-size: 1.25rem;
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -54,12 +54,12 @@
 /* Bold Display Statement Copy */
 .statementText {
   color: #ffffff;
-  font-size: clamp(1.5rem, 2.5vw, 2.1rem); 
-  font-weight: 700;
+  font-size: clamp(1.5rem, 2.5vw, 1.25rem); 
+  font-weight: 400;
   line-height: 1.35;
   margin: 0;
   letter-spacing: -0.01em;
-  font-family: var(--heading-font);
+  font-family: var(--text-font);
 }
 
 

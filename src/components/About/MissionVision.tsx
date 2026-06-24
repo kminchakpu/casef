@@ -28,7 +28,7 @@ export default function MissionVision(): React.JSX.Element {
           {statementData.map((item: StatementCard) => (
             <div key={item.id} className={styles.card}>
               <span className={styles.badge}>{item.badge}</span>
-              <h3 className={styles.statementText}>{item.text}</h3>
+              <h4 className={styles.statementText}>{item.text}</h4>
             </div>
           ))}
         </div>
